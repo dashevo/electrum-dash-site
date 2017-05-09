@@ -1,25 +1,6 @@
 (function($){
 	$(window).load(function(){
 
-		// INITIALIZE ANIMSITION
-		if($(".animsition").length){
-			$(".animsition").animsition({
-				inClass               :   'fade-in-up-sm',
-				outClass              :   'fade-out-up-sm',
-				inDuration            :    1100,
-				outDuration           :    800,
-				linkElement           :   '.animsition-link',
-				loading               :    true,
-				loadingParentElement  :   'body',
-				unSupportCss          : [ 'animation-duration',
-										  '-webkit-animation-duration',
-										  '-o-animation-duration'
-										],
-				overlay               :   false,
-				overlayClass          :   'animsition-overlay-slie',
-				overlayParentElement  :   'body'
-			});
-		}
 
 		// INPUTS EVENTS
 		$('.input_1 input, .textarea_1 textarea').on('focus', function() {
@@ -81,22 +62,6 @@
 			}
 		});
 
-
-
-		 // Contact form
-  		var form = $('#main-contact-form');
-  			form.submit(function(event){
-    			event.preventDefault();
-    			var form_status = $('<div class="form_status"></div>');
-    			$.ajax({
-      				url: $(this).attr('action'),
-      					beforeSend: function(){
-        				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Email is sending...</p>').fadeIn() );
-      				}
-    			}).done(function(data){
-      				form_status.html('<p class="text-success">Thank you for contact us. As early as possible  we will contact you</p>').delay(3000).fadeOut();
-    			});
-  			});
 
 
 

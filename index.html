@@ -78,9 +78,6 @@
 					<a href="#more" class="download-button">Learn More</a>
 					<a href="#download" class="download-button colorred">Download</a>
 				</div>
-				<div class="mouse">
-					<div class="scroll"></div>
-				</div>
 			</section>
 			<!-- end box-intro -->
 		</div>
@@ -434,7 +431,6 @@
 	<script type="text/javascript" src="assets/js/modernizr.js"></script>
 	<script type="text/javascript" src="assets/js/isotope.pkgd.min.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.flexslider-min.js"></script>
-	<script type="text/javascript" src="assets/js/jquery.animsition.min.js"></script>
 	<script type="text/javascript" src="assets/js/main.js"></script>
 	<script type="text/javascript" src="assets/js/smooth-scroll.js"></script>
 	<script type="text/javascript" src="assets/js/numscroller.js"></script>
@@ -458,26 +454,6 @@
 
 		smoothScroll.init();
 
-		// initialize isotope
-		var $container = $('.portfolio_container');
-		$container.isotope({
-			filter: '*',
-		});
-
-		$('.portfolio_filter a').click(function() {
-			$('.portfolio_filter .active').removeClass('active');
-			$(this).addClass('active');
-
-			var selector = $(this).attr('data-filter');
-			$container.isotope({
-				filter: selector,
-				animationOptions: {
-					duration: 500,
-					animationEngine: "jquery"
-				}
-			});
-			return false;
-		});
 	});
 	</script>
 </body>
