@@ -21,7 +21,7 @@ deploy:
   # use script instead of s3 b/c the "s3" provider doesn't allow "delete"
   # functionality
   - provider: script
-    script: aws --region "${AWS_REGION}" sync --delete --acl private ./dist/ "s3://${S3_BUCKET}/${S3_PREFIX}/"
+    script: aws --region "${AWS_REGION}" s3 sync --delete --acl private ./dist/ "s3://${S3_BUCKET}/${S3_PREFIX}/"
     on:
       branch: release
 
