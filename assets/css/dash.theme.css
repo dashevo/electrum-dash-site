@@ -46,6 +46,10 @@
     background-color: rgba(188, 15, 17, 1.00);
 }
 
+.colorblue {
+    background-color: rgba(121, 173, 250, 1.00);
+}
+
 .box-header {
     z-index: 200;
 }
