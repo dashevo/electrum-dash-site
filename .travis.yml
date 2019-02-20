@@ -26,7 +26,7 @@ deploy:
     script: aws --region "${AWS_REGION}" s3 sync --delete --acl private ./dist/ "s3://${S3_BUCKET}/${S3_PREFIX}/"
     skip_cleanup: true
     on:
-      branch: release
+      branch: master
 
 after_deploy:
   - aws cloudfront create-invalidation --distribution-id "$CLOUDFRONT_DISTRIBUTION_ID" --paths '/*'
